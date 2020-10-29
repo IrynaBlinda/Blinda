@@ -1,1 +1,104 @@
+import csv
+import os
+
+os.chdir('C:/ICS-18092020/Laba5')
+
+def isFileExisting(filename):
+    return os.path.isfile(filename)
+
+
+def outputFileByName(filename):
+    print('File' + filename)
+    fd =open(filename, 'r')
+    reader = csv.reader(fd, delimiter='\t')
+    for row in reader:
+        print(row)
+    fd.close()
+
+
+file1='first_group.txt'
+file2='second_group.txt'
+
+
+def readFiles():
+
+    fd1 =open(file1, 'r')
+    reader = csv.reader(fd1, delimiter='\t')
+    print('\nfirst group:')
+    for row in reader:
+        print(row)
+
+    fd2 =open(file2, 'r')
+    reader = csv.reader(fd2, delimiter='\t')
+    print('\nsecond group:')
+    for row in reader:
+        print(row)
+
+    fd1.close()
+    fd2.close()
+
+
+def writeToFiles():
+    fd1 =open(file1, 'w')
+    fd1.write('Ladonos Zina, 11\nZubriy Anya, 15\nOstapenko Pasha, 18')
+
+    fd2 =open(file2, 'w')
+    fd2.write('Parfenyk Lera, 39\nMolochna Liza, 30\nHorot Vova, 5')
+
+    fd1.close()
+    fd2.close()
+
+
+def addToFiles():
+    fd1 =open(file1, 'a')
+    fd1.write('\nLosovyi Dan, 22\nMyronyak Kolya, 34\nHordienko Yan, 56')
+
+    fd2 =open(file2, 'a')
+    fd2.write('\nGorot Yana, 17\nMorot Olya, 25\nNorot Nastya, 3 ')
+
+    fd1.close()
+    fd2.close()
+
+
+def searchFilesInDirectory(query):
+    if(not isFileExisting(query)):
+        print('File with name' + query + 'does not exist')
+    else:
+        outputFileByName(query)
+
+
+def searchTextInFiles(filename, query):
+
+    fd = open(filename, 'r')
+    reader = fd.resdlines()
+
+    for row in reader:
+        if query.lower() in row.lower():
+            print(f'Found: {row}')
+
+    fd.close()
+
+def sortMarksInFile(filename):
+    dict = {}
+
+    fd = open(filename, 'r+')
+
+    reader = fd.readlines()
+
+    for row in reader:
+       split_row_by_coma = row.split(',')
+
+       dict[int(split_row_by_coma[1])] = split_row_by_coma[0]
+
+    sorted_dict_by_items = sorted(dict.items())
+    print(sorted_dict_by_items)
+    fd.close()
+
+
+#readFiles()
+#writeToFiles()
+#addToFiles()
+#searchFilesInDirectory(file2)
+searchTextInFiles(file2, 'ous)
+#sortMarksInFile(file1)
 
