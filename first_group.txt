@@ -1,6 +1,9 @@
-Zina, 11
-Anya, 15
-Pasha, 18
-Dasha, 10
-Masha, 9
-Nastya, 5
+Ladonos Zina, 11
+Zubriy Anya, 15
+Ostapenko Pasha, 18
+Losovyi Dan, 22
+Myronyak Kolya, 34
+Hordienko Yan, 56
+Losovyi Dan, 22
+Myronyak Kolya, 34
+Hordienko Yan, 56
