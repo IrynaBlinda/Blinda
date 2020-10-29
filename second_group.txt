@@ -1,6 +1,9 @@
-Lera, 39
-Liza, 30
-Vova, 5
-Vlad, 25
-Sasha, 23
-Nikita, 12
+Parfenyk Lera, 39
+Molochna Liza, 30
+Horot Vova, 5
+Gorot Yana, 17
+Morot Olya, 25
+Norot Nastya, 3 
+Gorot Yana, 17
+Morot Olya, 25
+Norot Nastya, 3 
