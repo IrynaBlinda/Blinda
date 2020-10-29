@@ -1,0 +1,6 @@
+Lera, 39
+Liza, 30
+Vova, 5
+Vlad, 25
+Sasha, 23
+Nikita, 12
